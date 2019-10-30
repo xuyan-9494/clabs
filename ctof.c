@@ -7,8 +7,8 @@ main()
     upper=100;
     step=5;
     celsius=lower;
-    printf("celsius, fahr\n");
-    printf("\n\n\n\n");
+    printf("celsius fahr\n");
+    printf("\n");
     while(celsius<=upper){;
         fahr=32+(celsius*1.8);
         printf("%d\t%d\r\n",celsius,fahr);
