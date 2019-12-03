@@ -3,10 +3,10 @@
 #include <ctype.h>
 #include <math.h>
 
-#define MAXOP 100   
+#define MAXOP 100 
 #define NUMBER '0'   
-#define MAXVAL 100  
-#define BUFSIZE 100 
+#define MAXVAL 100 
+#define BUFSIZE 100  
 
 int getop(char []);
 void push(double);
@@ -17,7 +17,7 @@ int sp = 0;
 
 int main() {
     int type;
-    double op2;
+    double op1, op2;
     char s[MAXOP];
     
     while((type = getop(s)) != EOF) {
@@ -32,7 +32,9 @@ int main() {
                 push(pop() * pop());
                 break;
             case '-':
-                push(-pop() + pop());
+				op2 = pop();
+				op1 = pop();
+                push(op1 - op2);
                 break;
             case '/':
                 op2 = pop();
@@ -118,3 +120,6 @@ int getop(char s[])
         ungetchar(c);
     return NUMBER;
 }
+
+
+
