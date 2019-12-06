@@ -120,3 +120,4 @@ int getop(char s[])
         ungetchar(c);
     return NUMBER;
 
+}
