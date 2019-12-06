@@ -119,6 +119,6 @@ int getop(char s[])
     if (c != EOF)
         ungetchar(c);
     return NUMBER;
-}
+
 
 
